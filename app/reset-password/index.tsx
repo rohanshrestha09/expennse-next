@@ -56,6 +56,7 @@ export default function ResetPassword() {
 
     try {
       await account.updateRecovery(userId, secret, values.password);
+      form.reset();
       toast({ title: "Password reset successful" });
     } catch (err) {
       toast({
